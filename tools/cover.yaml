@@ -1,0 +1,9 @@
+# 표지 설정 — 수정 후 python tools/build_cover.py
+vol: 2
+title: "가명정보|*A to Z*"
+title_size: 132
+primary: teal
+secondary: indigo
+icons: ["🪪", "🎭", "🔐"]
+keywords: [개인정보 보호법, 가명처리 5단계, 가명처리 기법, 결합·안전조치]
+author: ""
