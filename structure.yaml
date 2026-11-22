@@ -60,6 +60,8 @@ chapters:
       - { slug: encryption,     title: 암호화·해시·토큰화, tags: [기법, 암호화] }
       - { slug: noise,          title: 잡음 추가·무작위화, tags: [기법] }
       - { slug: privacy-models, title: 프라이버시 모델 (k-익명성·l-다양성·t-근접성·차분프라이버시), tags: [기법, 평가] }
+      - { slug: unstructured,   title: "비정형 데이터 가명처리 (이미지·영상·음성·텍스트)", tags: [기법, 비정형] }
+      - { slug: pets,           title: "최신 프라이버시 강화 기술 (합성데이터·동형암호·연합학습 등)", tags: [기법, PETs] }
 
   - id: "05"
     slug: combination
@@ -69,6 +71,8 @@ chapters:
       - { slug: overview,       title: 결합 절차 개요, tags: [결합] }
       - { slug: agencies,       title: 결합전문기관과 결합키관리기관, tags: [결합, 기관] }
       - { slug: export,         title: 결합 후 반출 심사, tags: [결합, 반출] }
+      - { slug: lead-cases,     title: 가명정보 결합 선도사례로 보는 활용법, tags: [결합, 사례] }
+      - { slug: finance-combination, title: 금융 분야 결합 (데이터전문기관), tags: [결합, 금융] }
 
   - id: "06"
     slug: security
@@ -87,6 +91,7 @@ chapters:
       - { slug: healthcare,     title: 보건의료 분야 사례, tags: [사례, 보건의료] }
       - { slug: finance,        title: 금융 분야 사례, tags: [사례, 금융], see_also: ["파이썬으로 시작하는 실전 퀀트 투자"] }
       - { slug: public,         title: 공공 분야 사례, tags: [사례, 공공] }
+      - { slug: lessons,        title: 사례에서 배우는 활용 증진 전략, tags: [사례, 전략] }
 
   - id: "08"
     slug: ai-era
@@ -97,6 +102,18 @@ chapters:
       - { slug: ai-detection,   title: AI로 식별자 자동 탐지하기, tags: [AI, 탐지] }
       - { slug: ontology,       title: 개인정보 항목 온톨로지로 분류하기, tags: [AI, 온톨로지], see_also: ["LLM × 온톨로지 — 실전 프로젝트"] }
       - { slug: synthetic,      title: 합성데이터와 가명정보, tags: [AI, 합성데이터] }
+
+  - id: "09"
+    slug: global
+    title: 해외 제도와 사례
+    summary: EU·영국·미국·일본의 가명처리 제도와 최신 지침·판례를 살펴보고 우리 제도와 비교합니다.
+    pages:
+      - { slug: eu-gdpr,        title: "EU GDPR과 EDPB 가명처리 지침(01/2025)", tags: [해외, EU] }
+      - { slug: eu-srb-case,    title: "EU 사법재판소 SRB 판결 (C-413/23 P)", tags: [해외, EU, 판례] }
+      - { slug: uk-ico,         title: 영국 ICO 익명처리·가명처리 지침, tags: [해외, 영국] }
+      - { slug: us-hipaa,       title: "미국 HIPAA 비식별 조치 (Safe Harbor·전문가 판단)", tags: [해외, 미국, 의료] }
+      - { slug: japan-appi,     title: "일본 개인정보보호법의 가명가공정보", tags: [해외, 일본] }
+      - { slug: comparison,     title: 국가별 비교와 우리에게 주는 시사점, tags: [해외, 비교] }
 
   - id: "90"
     slug: reference
