@@ -99,6 +99,10 @@ h1 em {{ font-style: normal; background: linear-gradient(90deg, {p1}, {s1}); -we
   font-size: 14px; display: flex; align-items: center; justify-content: center; margin-top: 3px; }}
 .bad h2 {{ background: linear-gradient(90deg, #DC2626, #F43F5E); }} .bad li {{ background: #FEF2F2; }} .bad li i {{ background: #EF4444; }}
 .good h2 {{ background: linear-gradient(90deg, #059669, #10B981); }} .good li {{ background: #ECFDF5; }} .good li i {{ background: #10B981; }}
+.neu1 h2 {{ background: linear-gradient(90deg, {p1}, {p2}); }} .neu1 li {{ background: {p3}; }} .neu1 li i {{ background: {p2}; }}
+.neu2 h2 {{ background: linear-gradient(90deg, {s1}, {s2}); }} .neu2 li {{ background: #F8FAFC; }} .neu2 li i {{ background: {s2}; }}
+.vs {{ width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 16px; font-weight: 800; color: #fff; background: linear-gradient(135deg, {p2}, {s2}); box-shadow: 0 8px 18px -8px {p2}; }}
 .mid {{ display: flex; align-items: center; justify-content: center; }}
 /* matrix */
 .mx {{ display: grid; grid-template-columns: 190px 1fr 1fr; grid-template-rows: 54px 1fr 1fr; gap: 16px; }}
@@ -163,11 +167,17 @@ def cards(d, th):
 
 
 def compare(d, th):
+    """tone: good-bad(기본, 나쁜 예 → 좋은 예) / neutral(같은 내용의 두 표현)"""
     def panel(side, cls, mark):
         lis = "".join(f"<li><i>{mark}</i><span>{esc(x)}</span></li>" for x in side["items"])
         return f'<div class="panel {cls}"><h2>{esc(side["title"])}</h2><ul>{lis}</ul></div>'
-    return (f'<div class="cmp">{panel(d["left"], "bad", "✕")}<div class="mid"><div class="conn">{ARROW}</div></div>'
-            f'{panel(d["right"], "good", "✓")}</div>')
+    if d.get("tone") == "neutral":
+        left, right = panel(d["left"], "neu1", "•"), panel(d["right"], "neu2", "•")
+    else:
+        left, right = panel(d["left"], "bad", "✕"), panel(d["right"], "good", "✓")
+    mid = (f'<div class="conn">{ARROW}</div>' if d.get("tone") != "neutral" or d.get("arrow")
+           else '<div class="vs">VS</div>')
+    return f'<div class="cmp">{left}<div class="mid">{mid}</div>{right}</div>'
 
 
 def matrix(d, th):

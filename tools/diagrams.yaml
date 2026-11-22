@@ -136,3 +136,91 @@ diagrams:
       - { icon: "🔬", title: 과학적 연구, desc: "기술 개발·실증,\n기초·응용 연구\n(민간 투자 연구 포함)\n\n예) 서비스 개선 연구", color: teal }
       - { icon: "🗄️", title: 공익적 기록보존, desc: "공공의 이익을 위해\n지속적으로 보존할\n가치가 있는 기록\n\n예) 역사적 자료 보존", color: amber }
     note: "목적이 이 세 가지에 해당하는지 먼저 판단하고, 그 근거를 문서로 남기세요"
+
+  # ---------- 추가: 최신 기법·결합 사례·해외 ----------
+  - file: p04-7-unstructured.png
+    kicker: 04-7 · 비정형 데이터 가명처리
+    layout: cards
+    columns: 4
+    title: 비정형 데이터는 *먼저 찾고, 그다음 가린다*
+    subtitle: 2024년 개정 가이드라인은 비정형 데이터 가명처리 기준과 시나리오를 추가했습니다
+    cards:
+      - { icon: "🖼️", title: 이미지, desc: "얼굴·번호판·명찰\n탐지 → 블러·모자이크·\n삭제", color: teal }
+      - { icon: "🎞️", title: 영상, desc: "프레임마다 탐지·추적\n→ 마스킹\n음성 트랙도 함께", color: indigo }
+      - { icon: "🎙️", title: 음성, desc: "목소리 변조\n+ 받아쓰기 후\n이름·번호 제거", color: violet }
+      - { icon: "📝", title: 텍스트, desc: "개체명 인식으로\n이름·연락처·주소 탐지\n→ 대체·삭제", color: amber }
+    note: "자동 탐지는 놓치는 경우가 있으므로 표본을 사람이 검수하고 결과를 기록합니다"
+
+  - file: p04-8-pets.png
+    kicker: 04-8 · 최신 프라이버시 강화 기술
+    layout: cards
+    columns: 3
+    title: 데이터를 *보여 주지 않고* 활용하는 기술 (PETs)
+    cards:
+      - { icon: "🧬", title: 합성데이터, desc: "원본의 통계적 특성을\n닮은 가짜 데이터 생성", color: teal }
+      - { icon: "🎲", title: 차분 프라이버시, desc: "결과에 수학적으로\n설계된 잡음을 더함", color: indigo }
+      - { icon: "🔐", title: 동형암호, desc: "암호화한 채로\n계산하고 결과만 복호화", color: violet }
+      - { icon: "🌐", title: 연합학습, desc: "데이터는 그대로 두고\n모델만 오가며 학습", color: blue }
+      - { icon: "🤝", title: 안전한 다자간 계산, desc: "여러 기관이 원본을\n공개하지 않고 공동 계산", color: amber }
+      - { icon: "🏛️", title: 신뢰 실행 환경·분석 공간, desc: "통제된 공간에서만\n분석하고 결과만 반출", color: emerald }
+
+  - file: p05-4-lead-cases.png
+    kicker: 05-4 · 결합 선도사례
+    layout: cards
+    columns: 3
+    title: 가명정보 *결합 선도사례*로 보는 활용
+    subtitle: 개인정보보호위원회가 추진한 결합 시범·선도사례 (보도자료 기준 요약)
+    cards:
+      - { icon: "🎗️", title: 암 치료 효과 분석, desc: "국립암센터: 암종별 치료내역\n+ 생존·사망원인 정보\n(1기, 2021)", color: teal }
+      - { icon: "📵", title: 스팸 실태 연구, desc: "한국인터넷진흥원: 스팸 신고\n+ 통신사 가입정보(연령·성별)\n(1기, 2021)", color: indigo }
+      - { icon: "🔌", title: 충전 인프라 입지, desc: "친환경차 충전 수요 예측과\n최적 입지 선정\n(2기, 2022)", color: emerald }
+      - { icon: "🏥", title: 의료이용 형평성, desc: "생애주기별 의료이용 실태와\n형평성 비교\n(2기, 2022)", color: violet }
+      - { icon: "♿", title: 장애인 복지 효과, desc: "장애인 복지정책의\n효과 분석\n(2기, 2022)", color: amber }
+      - { icon: "💰", title: 소득분배 영향, desc: "건강보험 급여가\n소득분배에 미치는 영향\n(2기, 2022)", color: blue }
+
+  - file: p05-5-finance.png
+    kicker: 05-5 · 금융 분야 결합
+    layout: flow
+    title: 금융 분야는 *데이터전문기관*을 거칩니다
+    subtitle: 신용정보법에 따라 금융위원회가 지정한 데이터전문기관이 결합을 수행합니다
+    steps:
+      - { icon: "🏦", title: 결합 신청, desc: "금융회사·이용기관이\n데이터전문기관에\n결합 신청", color: blue }
+      - { icon: "🔗", title: 결합, desc: "데이터전문기관이\n가명정보 결합", color: indigo }
+      - { icon: "🧮", title: 처리·평가, desc: "추가 가명·익명처리와\n적정성 평가", color: violet }
+      - { icon: "📤", title: 전달, desc: "결합키 삭제·대체 후\n신청 기관에 전달", color: teal }
+      - { icon: "📒", title: 기록·보고, desc: "결합 관련 기록 관리\n(연 1회 금융위 보고)", color: amber }
+
+  - file: p07-4-lessons.png
+    kicker: 07-4 · 활용 증진 전략
+    layout: stack
+    title: 가명정보 활용을 *늘리는 5가지 전략*
+    layers:
+      - { icon: "🎯", title: 질문부터, desc: "\"무엇을 알고 싶은가\"를 먼저 정하고 필요한 항목만 요청", color: teal }
+      - { icon: "🧰", title: 지원 제도 활용, desc: "선도사례 공모, 가명정보 지원 플랫폼, 결합전문기관 컨설팅", color: indigo }
+      - { icon: "🧪", title: 작게 시험, desc: "표본·합성데이터로 분석 가능성을 먼저 확인", color: violet }
+      - { icon: "📋", title: 기록과 재사용, desc: "가명처리 내역·적정성 검토 결과를 템플릿으로 재사용", color: amber }
+      - { icon: "🤝", title: 신뢰 확보, desc: "목적·성과를 공개해 정보주체와 사회의 신뢰를 쌓기", color: emerald }
+
+  - file: ch09-global.png
+    kicker: CHAPTER 09 · 해외 제도와 사례
+    layout: cards
+    columns: 4
+    title: 나라마다 *다른 이름, 같은 고민*
+    subtitle: 식별 가능성을 낮추면서 데이터를 활용하는 방법
+    cards:
+      - { icon: "🇪🇺", title: EU, desc: "GDPR 가명처리\n(Pseudonymisation)\nEDPB 지침 01/2025", color: indigo }
+      - { icon: "🇬🇧", title: 영국, desc: "UK GDPR\nICO 익명처리·\n가명처리 지침(2025)", color: blue }
+      - { icon: "🇺🇸", title: 미국, desc: "HIPAA 비식별\nSafe Harbor ·\n전문가 판단", color: teal }
+      - { icon: "🇯🇵", title: 일본, desc: "개인정보보호법\n가명가공정보\n(2022 시행)", color: amber }
+    note: "공통점: 가명처리한 정보도 원칙적으로 보호 대상이며, 재식별 위험 관리가 핵심입니다"
+
+  - file: p09-1-domain.png
+    kicker: 09-1 · EDPB 가명처리 지침
+    layout: flow
+    title: EDPB 지침의 핵심 개념 *가명처리 영역*
+    subtitle: 누구로부터 재식별을 막아야 하는지 먼저 정합니다 (Pseudonymisation domain)
+    steps:
+      - { icon: "🗺️", title: 영역 정하기, desc: "가명정보를 받는 사람·\n시스템의 범위 정의", color: indigo }
+      - { icon: "🔑", title: 변환 방법, desc: "키 기반 해시(HMAC) 등\n되돌리기 어려운 방식", color: violet }
+      - { icon: "🗄️", title: 추가정보 분리, desc: "키·대응표는 영역 밖에\n분리 보관", color: teal }
+      - { icon: "🛡️", title: 함께 쓰는 조치, desc: "접근 통제 등 다른\n안전조치와 함께 평가", color: amber }
