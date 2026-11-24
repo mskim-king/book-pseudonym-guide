@@ -3,6 +3,7 @@ theme:
   book: 가명정보 A to Z
   primary: teal
   secondary: indigo
+  style: fun
 
 diagrams:
   - file: ch01-spectrum.png
@@ -646,3 +647,139 @@ diagrams:
       desc: 처리 기록 보관, 목적 달성 후 파기 (06장)
       color: emerald
     note: 가장 강한 보호는 필요 없는 항목을 처음부터 받지 않는 것입니다
+
+  # ---------- 재미 그림 (만화 · 퀘스트 · 채팅) ----------
+  - file: p05-1-comic-combination.png
+    kicker: 05-1 · 가명정보 결합
+    layout: comic
+    columns: 2
+    title: 카드사와 통신사가 *데이터를 합치는 법*
+    subtitle: 4컷으로 보는 가명정보 결합 (가상의 이야기)
+    panels:
+    - color: teal
+      scene: 💳 🤝 📱
+      bubbles:
+      - who: 🧑‍💼
+        side: left
+        text: 우리 결제 데이터랑 너희 이동 데이터를 합치면 상권 분석이 되겠는데?
+      - who: 👩‍💼
+        side: right
+        text: 좋아! 근데 고객 이름은 절대 넘기면 안 돼.
+      caption: 서로 다른 기관이 데이터를 합치고 싶을 때
+    - color: indigo
+      sfx: 찰칵!
+      scene: 🔑 ➡️ 🏛️
+      bubbles:
+      - who: 🧑‍💼
+        side: left
+        text: 결합키만 만들어서 결합키관리기관(KISA)에 보낼게.
+      - who: 🤖
+        side: right
+        text: 결합키는 내가 짝만 맞춰 줄게요. 데이터는 안 봐요!
+      caption: 열쇠(결합키)는 이쪽 길로
+    - color: violet
+      scene: 📦 ➡️ 🏢
+      bubbles:
+      - who: 👩‍💼
+        side: left
+        text: 가명정보는 결합전문기관으로 따로 보내자.
+      - who: 🧑‍🔬
+        side: right
+        text: 열쇠와 데이터가 다른 길로 오니, 아무도 혼자선 누군지 몰라요.
+      caption: 데이터는 다른 길로
+    - color: emerald
+      sfx: 승인!
+      scene: 👩‍⚖️ ✅ 📊
+      bubbles:
+      - who: 👩‍⚖️
+        side: left
+        text: 반출심사위원회입니다. 시군구 단위 통계라면 반출 OK!
+      - who: 🧑‍💼
+        side: right
+        text: 와, 이제 안전하게 분석할 수 있다!
+      caption: 심사를 통과한 결과만 밖으로
+    note: '핵심: 결합키와 가명정보는 서로 다른 길로 — 누구도 혼자서 원래 사람을 알 수 없습니다'
+  - file: p07-5-quest.png
+    kicker: 07-5 · 가명정보로 연구하는 방법
+    layout: quest
+    columns: 4
+    start_label: START
+    goal_label: GOAL!
+    title: 가명정보 연구, *레벨업* 지도
+    subtitle: 단계를 하나씩 깨면 안전한 연구 결과를 얻습니다
+    stages:
+    - icon: 🎯
+      title: 목적 정하기
+      desc: '통계? 연구? 기록?
+
+        필요한 항목만'
+      color: teal
+    - icon: ⚖️
+      title: 위험도 판단
+      desc: '누가·어디서 쓰나
+
+        → 저·중·고'
+      color: indigo
+      xp: +2026 개정
+    - icon: 🧩
+      title: 가명처리
+      desc: '삭제·가명키
+
+        범주화·잡음'
+      color: violet
+    - icon: 🔍
+      title: 적정성 검토
+      desc: '전문가 검토
+
+        k-익명성 점검'
+      color: blue
+    - icon: 🔬
+      title: 분석
+      desc: '결합전문기관
+
+        이노베이션 존'
+      color: cyan
+    - icon: 📤
+      title: 결과 반출
+      desc: '반출 심사
+
+        작은 칸 숨기기'
+      color: orange
+    - icon: 🏆
+      title: 기록·파기
+      desc: '처리 기록 보관
+
+        목적 달성 후 파기'
+      color: amber
+    note: '보너스 팁: 필요 없는 항목은 처음부터 받지 않는 것이 최강 방어!'
+  - file: p04-6-chat-kanon.png
+    kicker: 04-6 · 프라이버시 모델
+    layout: chat
+    title: k-익명성, *대화로* 이해하기
+    subtitle: 신입 분석가와 선배의 채팅 (가상의 대화)
+    chat_title: 💬 데이터팀 단톡방
+    messages:
+    - name: 신입 지우
+      avatar: 🐣
+      text: 선배, 이름이랑 전화번호 다 지웠어요. 이제 안전하죠?
+    - name: 선배 민준
+      avatar: 🦉
+      side: right
+      text: 음… '서울 강남구 · 87세 · 남성'인 사람이 *딱 한 명*이면?
+    - name: 신입 지우
+      avatar: 🐣
+      text: 헉, 그럼 그 한 명은 누군지 알 수 있겠네요 😱
+    - name: 선배 민준
+      avatar: 🦉
+      side: right
+      text: '그래서 *k-익명성*! 같은 조합을 가진 사람이 최소 k명이 되게 묶는 거야.
+
+        k=5면 그중 누구인지 맞힐 확률은 최대 1/5 = 20%.'
+    - name: 신입 지우
+      avatar: 🐣
+      text: 그럼 나이를 '80대', 주소를 '서울'로 넓히면 되겠네요!
+    - name: 선배 민준
+      avatar: 🦉
+      side: right
+      text: 정답 👍 대신 너무 넓히면 분석할 게 없어지니 *균형*이 중요해.
+    note: k를 키우면 안전해지지만 데이터는 뭉툭해집니다 — 목적에 맞는 k를 고르세요

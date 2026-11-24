@@ -18,6 +18,8 @@
 
 ![가명정보 결합은 이렇게 흐릅니다](../assets/p05-combination-network.png)
 
+![카드사와 통신사가 데이터를 합치는 법 (4컷 만화)](../assets/p05-1-comic-combination.png)
+
 ## 결합 절차 한눈에 보기
 
 ![서로 다른 기관의 가명정보 결합](../assets/ch05-combination.png)
