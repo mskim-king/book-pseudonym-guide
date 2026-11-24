@@ -2,6 +2,8 @@
 
 ![주요 가명처리 기법](../assets/ch04-techniques.png)
 
+![가명처리 기법의 위험·유용성 지도](../assets/p04-tech-scatter.png)
+
 ## 이 장의 구성
 
 [[SubPages]]

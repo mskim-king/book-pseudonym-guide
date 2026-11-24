@@ -224,3 +224,302 @@ diagrams:
       - { icon: "🔑", title: 변환 방법, desc: "키 기반 해시(HMAC) 등\n되돌리기 어려운 방식", color: violet }
       - { icon: "🗄️", title: 추가정보 분리, desc: "키·대응표는 영역 밖에\n분리 보관", color: teal }
       - { icon: "🛡️", title: 함께 쓰는 조치, desc: "접근 통제 등 다른\n안전조치와 함께 평가", color: amber }
+
+  # ---------- 데이터 시각화 (chart · network · sankey · timeline) ----------
+  - file: p04-6-k-risk.png
+    kicker: 04-6 · 프라이버시 모델
+    layout: chart
+    kind: bar
+    height: 410
+    title: k가 커질수록 *재식별 위험 상한*은 줄어듭니다
+    subtitle: 'k-익명성: 같은 속성 조합을 가진 사람이 최소 k명 → 한 사람으로 특정될 확률은 최대 1/k'
+    categories:
+    - k=1
+    - k=2
+    - k=3
+    - k=5
+    - k=10
+    - k=20
+    - k=50
+    unit: '%'
+    highlight: 4
+    series:
+    - name: 최대 재식별 확률
+      data:
+      - 100.0
+      - 50.0
+      - 33.3
+      - 20.0
+      - 10.0
+      - 5.0
+      - 2.0
+      color: teal
+    source: '계산식: 최대 재식별 확률 = 1 ÷ k (동질성·배경지식 공격은 별도 고려: l-다양성·t-근접성)'
+    note: k를 키우면 위험은 줄지만 데이터가 뭉뚱그려져 유용성도 떨어집니다 — 목적에 맞는 균형점을 찾으세요
+  - file: p04-tech-scatter.png
+    kicker: CHAPTER 04 · 가명처리 기법
+    layout: chart
+    kind: scatter
+    height: 520
+    title: 가명처리 기법의 *위험·유용성* 지도
+    subtitle: '가로: 데이터 유용성 손실 · 세로: 재식별 위험 감소 효과 (이 책의 설명용 상대 위치)'
+    x_label: 유용성 손실 →
+    y_label: 위험 감소 효과 →
+    x_range:
+    - 0
+    - 10
+    y_range:
+    - 0
+    - 10
+    quadrants:
+    - 효율적 (먼저 검토)
+    - 강한 보호 (손실 큼)
+    - 가벼운 처리
+    - 비효율 (피하기)
+    quadrant_colors:
+    - '#F0FDFA'
+    - '#EEF2FF'
+    - '#F8FAFC'
+    - '#FEF2F2'
+    points:
+    - name: 가명키(HMAC)
+      x: 2
+      y: 6.2
+      color: teal
+    - name: 마스킹
+      x: 3.2
+      y: 4.8
+      color: teal
+    - name: 범주화(일반화)
+      x: 4.6
+      y: 6.4
+      color: indigo
+    - name: 잡음 추가
+      x: 4
+      y: 7.2
+      color: indigo
+    - name: k-익명성
+      x: 6
+      y: 7.8
+      color: violet
+    - name: 차분 프라이버시
+      x: 6.8
+      y: 9
+      color: violet
+    - name: 합성데이터
+      x: 5.4
+      y: 8.4
+      color: pink
+    - name: 삭제
+      x: 8.4
+      y: 8.2
+      color: slate
+      label: left
+    note: '한 가지 기법보다 조합(예: 가명키 + 범주화 + k-익명성 점검)이 일반적입니다'
+  - file: p05-combination-network.png
+    kicker: 05-1 · 가명정보 결합 절차
+    layout: network
+    height: 500
+    arrows: true
+    title: 가명정보 *결합*은 이렇게 흐릅니다
+    subtitle: 서로 다른 기관의 가명정보를 결합키로 연결하고, 심사를 거쳐 반출합니다
+    groups:
+      결합 신청 기관: teal
+      결합키관리기관: indigo
+      결합전문기관: violet
+      결과: emerald
+    nodes:
+    - name: 기업 A
+      group: 결합 신청 기관
+      x: 120
+      y: 140
+      size: 58
+    - name: 기업 B
+      group: 결합 신청 기관
+      x: 120
+      y: 440
+      size: 58
+    - name: '결합키관리기관
+
+        (KISA)'
+      group: 결합키관리기관
+      x: 480
+      y: 440
+      size: 82
+    - name: 결합전문기관
+      group: 결합전문기관
+      x: 620
+      y: 150
+      size: 82
+    - name: '반출심사위원회
+
+        (3~7명)'
+      group: 결합전문기관
+      x: 900
+      y: 440
+      size: 56
+    - name: '결합 데이터
+
+        반출·분석'
+      group: 결과
+      x: 1050
+      y: 150
+      size: 60
+    links:
+    - - 기업 A
+      - '결합키관리기관
+
+        (KISA)'
+      - 결합키
+    - - 기업 B
+      - '결합키관리기관
+
+        (KISA)'
+      - 결합키
+    - - '결합키관리기관
+
+        (KISA)'
+      - 결합전문기관
+      - 결합키 연계정보
+    - - 기업 A
+      - 결합전문기관
+      - 가명정보
+    - - 기업 B
+      - 결합전문기관
+      - 가명정보
+    - - 결합전문기관
+      - '반출심사위원회
+
+        (3~7명)'
+      - 반출 신청
+    - - '반출심사위원회
+
+        (3~7명)'
+      - '결합 데이터
+
+        반출·분석'
+      - 승인
+    curveness: 0.08
+    note: 결합키와 가명정보가 서로 다른 길로 전달되는 것이 핵심 — 누구도 혼자 원래 사람을 알 수 없게 합니다
+  - file: p09-law-timeline.png
+    kicker: CHAPTER 09 · 해외 제도
+    layout: timeline
+    title: 가명정보 관련 *국내외 제도* 연표
+    subtitle: 시행·채택일 기준 주요 변화
+    events:
+    - date: '2018.5'
+      title: EU GDPR 시행
+      desc: 가명화 개념 명시
+      color: indigo
+    - date: '2020.8'
+      title: 데이터 3법 시행
+      desc: 국내 가명정보 도입
+      color: teal
+    - date: '2022.4'
+      title: 일본 가명가공정보
+      desc: 개정 개인정보보호법
+      color: pink
+    - date: '2025.1'
+      title: EDPB 가명화 지침
+      desc: Guidelines 01/2025
+      color: indigo
+    - date: '2025.9'
+      title: EU 사법재판소
+      desc: C-413/23 P (SRB)
+      color: violet
+    - date: '2026.1'
+      title: AI 기본법 시행
+      desc: 국내
+      color: emerald
+    note: 세부 내용과 근거는 02장·09장 각 페이지의 근거·출처 표를 확인하세요
+  - file: p03-process-sankey.png
+    kicker: CHAPTER 03 · 가명처리 절차
+    layout: sankey
+    height: 460
+    title: 원본 항목이 *가명정보*가 되기까지
+    subtitle: 개인정보 항목 유형별로 어떤 처리를 거치는지 (흐름 굵기는 설명용)
+    nodes:
+    - name: 이름·연락처
+      color: slate
+    - name: 주민번호·고객ID
+      color: slate
+    - name: 생년월일·주소
+      color: slate
+    - name: 구매·진료 내역
+      color: slate
+    - name: 삭제
+      color: red
+    - name: 가명키(HMAC)
+      color: teal
+    - name: 범주화
+      color: indigo
+    - name: 그대로 유지
+      color: slate
+    - name: 가명정보 데이터셋
+      color: emerald
+    links:
+    - - 이름·연락처
+      - 삭제
+      - 4
+    - - 주민번호·고객ID
+      - 가명키(HMAC)
+      - 4
+    - - 생년월일·주소
+      - 범주화
+      - 4
+    - - 구매·진료 내역
+      - 그대로 유지
+      - 3
+    - - 구매·진료 내역
+      - 범주화
+      - 1
+    - - 가명키(HMAC)
+      - 가명정보 데이터셋
+      - 4
+    - - 범주화
+      - 가명정보 데이터셋
+      - 5
+    - - 그대로 유지
+      - 가명정보 데이터셋
+      - 3
+    note: 분석에 필요한 항목은 살리고, 식별에만 쓰이는 항목은 지우거나 바꿉니다 — 처리 후 03-4 적정성 검토
+  - file: p01-3-purpose-cards.png
+    kicker: 01-3 · 가명정보 활용 목적
+    layout: chart
+    kind: radar
+    height: 440
+    max: 5
+    title: 세 가지 *활용 목적* 비교
+    subtitle: 동의 없이 가명정보를 쓸 수 있는 목적 — 특성은 이 책의 설명용 평가
+    indicators:
+    - 활용 범위 넓음
+    - 공익성 요구
+    - 결과 공개 쉬움
+    - 상업 활용
+    - 안전조치 부담
+    series:
+    - name: 통계 작성
+      data:
+      - 4
+      - 2
+      - 5
+      - 4
+      - 3
+      color: teal
+    - name: 과학적 연구
+      data:
+      - 5
+      - 2
+      - 3
+      - 4
+      - 4
+      color: indigo
+    - name: 공익적 기록보존
+      data:
+      - 2
+      - 5
+      - 3
+      - 1
+      - 3
+      color: pink
+    note: 어느 목적이든 재식별 금지와 안전조치 의무는 같습니다 (06장)
