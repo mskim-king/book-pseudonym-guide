@@ -523,3 +523,126 @@ diagrams:
       - 3
       color: pink
     note: 어느 목적이든 재식별 금지와 안전조치 의무는 같습니다 (06장)
+
+  # ---------- 2026 보강 ----------
+  - file: p02-2-guideline-timeline.png
+    kicker: 02-2 · 가명정보 처리 가이드라인
+    layout: timeline
+    title: 가명정보 처리 가이드라인 *개정 연표*
+    subtitle: 2020년 첫 발간 이후 네 번째 큰 변화 — 2026년 위험도 기반 체계로 전면 개정
+    events:
+    - date: '2020'
+      title: 첫 발간
+      desc: 데이터 3법 시행 이후
+      color: slate
+    - date: '2022.4'
+      title: 개정
+      desc: 현장 의견 반영
+      color: teal
+    - date: '2024.2'
+      title: 개정
+      desc: 비정형 데이터 기준 추가
+      color: indigo
+    - date: '2025.12'
+      title: 개정안 공개
+      desc: 의견 수렴
+      color: violet
+    - date: 2026.3.31
+      title: 전면 개정
+      desc: 저·중·고 위험도, 서식 24→10종
+      color: emerald
+      ex: 본권·별권 분리
+    note: 최신판 기준으로 서식과 위험도 판단을 다시 점검하세요
+  - file: p05-6-national-support.png
+    kicker: 05-6 · 국가 지원 제도
+    layout: cards
+    columns: 3
+    title: 국가가 지원하는 *가명정보 활용 제도*
+    subtitle: 처음이면 컨설팅, 합칠 땐 결합, 정밀 분석엔 안전한 공간
+    cards:
+    - icon: 🧭
+      title: 지원 플랫폼·지원센터
+      desc: '컨설팅·적정성 검토
+
+        처리 공간·도구 (무료)'
+      color: teal
+      ex: '처음 가명처리하는
+
+        스타트업'
+    - icon: 🔗
+      title: 결합전문기관
+      desc: '다른 기관 데이터와
+
+        안전하게 결합·반출'
+      color: indigo
+      ex: '카드사 + 통신사
+
+        상권 분석'
+    - icon: 🛡️
+      title: 개인정보 이노베이션 존
+      desc: '처리 수준 완화·장기 보관
+
+        제3자 재사용 (개인정보위)'
+      color: violet
+      ex: 병원 의료 영상 AI
+    - icon: 🏢
+      title: 데이터안심구역
+      desc: '보안 공간 분석 후
+
+        결과만 반출 (과기정통부)'
+      color: blue
+      ex: 미개방 산업 데이터
+    - icon: ⚖️
+      title: 사전적정성 검토제
+      desc: '신서비스 법 준수 방안
+
+        함께 마련'
+      color: orange
+      ex: '가명정보 기반
+
+        핀테크 서비스'
+    - icon: 📊
+      title: 분야별 원격 분석
+      desc: 'MDIS · 보건의료빅데이터
+
+        · CreDB'
+      color: emerald
+      ex: '가계 조사 원자료
+
+        논문'
+    note: 지정 기관 수·조건은 해마다 바뀝니다 — 신청 전 운영 기관 공고를 확인하세요
+  - file: p07-5-research-flow.png
+    kicker: 07-5 · 가명정보로 연구하는 방법
+    layout: stack
+    title: 가명정보로 연구하는 *7단계*
+    subtitle: 각 단계에서 남긴 기록이 곧 적법성의 근거가 됩니다
+    layers:
+    - icon: 🎯
+      title: ① 목적 명확화
+      desc: 통계·연구·기록보존 중 무엇인지, 필요한 항목만
+      color: teal
+    - icon: ⚖️
+      title: ② 위험도 판단
+      desc: 누가 · 어떤 환경에서 → 저·중·고 위험도
+      color: indigo
+    - icon: 🧩
+      title: ③ 가명처리 설계
+      desc: 삭제 · 가명키 · 범주화 · 잡음 (04장)
+      color: violet
+    - icon: 🔍
+      title: ④ 적정성 검토
+      desc: 전문가 검토, k-익명성 등 재식별 위험 점검
+      color: blue
+    - icon: 🔬
+      title: ⑤ 분석
+      desc: 결합전문기관 · 이노베이션 존 · 원격 분석
+      color: cyan
+    - icon: 📤
+      title: ⑥ 결과 반출·공개
+      desc: 반출 심사, 작은 칸 숨기기(셀 억제)
+      color: orange
+    - icon: 🗂️
+      title: ⑦ 기록·파기
+      desc: 처리 기록 보관, 목적 달성 후 파기 (06장)
+      color: emerald
+    note: 가장 강한 보호는 필요 없는 항목을 처음부터 받지 않는 것입니다
