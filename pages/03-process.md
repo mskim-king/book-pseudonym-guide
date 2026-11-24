@@ -2,6 +2,8 @@
 
 ![가명처리 5단계 절차](../assets/ch03-five-steps.png)
 
+![원본 항목이 가명정보가 되기까지](../assets/p03-process-sankey.png)
+
 ## 이 장의 구성
 
 [[SubPages]]
