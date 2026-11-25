@@ -7,3 +7,14 @@ secondary: indigo
 icons: ["🪪", "🎭", "🔐"]
 keywords: [개인정보 보호법, 가명처리 5단계, 가명처리 기법, 결합·안전조치]
 author: ""
+
+# ---- 재미 표지 (style: fun) ----
+style: fun
+bg: "#DDF7EF"
+hook: "개인정보, 쓰자니 무섭고 버리자니 아깝다면?"
+hero: "🕵️"
+bubble: "이름은 지우고|데이터는 살리고!"
+stickers: ["🎭", "🔐", "🪪", "✨"]
+burst: "2026|개정 지침|반영"
+deco: "🛡️"
+deco_top: 400
